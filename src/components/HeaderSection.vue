@@ -24,6 +24,7 @@ import { headerNav } from '@/constants';
             </div>
         </div>
     </header>
+    
 </template>
 
 <script>
