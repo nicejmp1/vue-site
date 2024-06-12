@@ -47,7 +47,7 @@ export default {
                     start: 'top 56px',
                     end: '+=3000',
                     scrub: 1,
-                    markers: true,
+                    markers: false,
                     invalidateOnRefresh: true,
                     anticipatePin: 1
                 }
