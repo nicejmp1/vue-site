@@ -13,7 +13,7 @@ import { headerNav } from '@/constants';
             <nav class="header__nav" :class="{show:isNavVisible}" role="navigation" aria-label="메인 메뉴">
                 <ul>
                     <li v-for="(nav, key) in headerNav" :key="key">
-                        <a :href="nav.url">{{ nav.title }}</a>
+                        <a :href="nav.url" @click="scrollLink($event)">{{ nav.title }}</a>
                     </li>
                 </ul>
             </nav>
@@ -36,6 +36,16 @@ import { headerNav } from '@/constants';
         methods: {
             toggleMobileMune() {
                 this.isNavVisible = !this.isNavVisible;
+            },
+            scrollLink(event) {
+                event.preventDefault();
+                
+                const targetId = event.target.getAttribute("href");
+                const targetElement = document.querySelector(targetId);
+
+                if(targetElement) {
+                    targetElement.scrollIntoView({behavior: "smooth"});
+                }
             }
         }
     }
@@ -151,6 +161,7 @@ import { headerNav } from '@/constants';
                     background-color: var(--black);
                     margin-top: 19px;
                     position: relative;
+                    z-index: 10000;
 
                     &::before {
                         content: '';

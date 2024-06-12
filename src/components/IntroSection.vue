@@ -34,7 +34,7 @@
     </section>
   </template>
   
-  <script>
+  <!-- <script>
   import { gsap } from "gsap";
   import { onMounted, ref } from 'vue';
   
@@ -58,7 +58,7 @@
       };
     }
   }
-  </script>
+  </script> -->
   
   <style lang="scss" scoped>
 
@@ -71,9 +71,12 @@
   }
 }
 
+
+
   #intro {
     height: 100vh;
     background-color: #fff5db;
+    padding-top: 120px;
   
     .intro__inner {
       width: 100%;
